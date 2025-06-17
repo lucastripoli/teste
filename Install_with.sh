@@ -16,7 +16,7 @@ while IFS= read -r line; do
   # Skip if empty after trimming
   [ -z "$line" ] && continue
   echo "Installing $line ..."
-  ./python3.7.3/bin/pip install "$line" --target ./python3.7.3_libs_with_version --upgrade
+  ./ingesta/Miniforge3_V3_7_3/bin/pip install "$line" --target ./ingesta/Miniforge3_V3.7.3_libs_with_version --upgrade
 done < "$REQ_FILE"
 
 echo "All packages processed."
